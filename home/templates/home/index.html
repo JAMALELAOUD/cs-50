@@ -1,0 +1,48 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<header>
+    <nav class="navbar">
+        <ul class="it">
+            <li>Home</li>
+            <li>HomeWork</li>
+            <li>Contact</li>
+            <li class="logoo">Homework</li>
+        </ul>
+    </nav>
+</header>
+<section class="hello">
+    <div class="thep">
+        Welcome back..!
+    </div>
+    <div class="btns">
+        <a class="view hbtn">View homework</a>
+        <a class="upload hbtn">Upload homework</a>
+    </div>
+</section>
+<section class="hwork">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            
+        </div>
+        <div class="col-md-8">
+            <div class="hereis">
+                Here is the latest homeworks..
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+            {% for homework in homework %}
+                <div class="col">
+                    <div class="card">
+                      <a href="{% url 'home:homework' homework.id  %}"> <img src="{{ homework.img.url }}" class="card-img-top" alt=""></a>
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'home:homework' homework.id  %}" class="ctitle">View</a></h5>
+                        <p class="card-text">{{ homework.title }}</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+</section>
+{% endblock content %}

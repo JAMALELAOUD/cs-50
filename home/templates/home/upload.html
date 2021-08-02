@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="ptitle">add new homework</h1>
+<div class="misform">
+    <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">homework title</label>
+    {{ Uwu.title }}
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">description</label>
+    {{ Uwu.desc }}
+    </div>
+    <div class="mb-3">
+    <label for="formFile" class="form-label">Homework image</label>
+        {{ Uwu.image }}
+    </div>
+    <div class="mb-3">
+    <label for="formFile" class="form-label">exercice</label>
+        {{ Uwu.img1 }}
+    </div>
+    <div class="mb-3">
+    <label for="formFile" class="form-label">solution</label>
+        {{ Uwu.img2 }}
+    </div>
+    <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit">Button</button>
+    <button class="btn btn-primary" type="button"><a href="/">go back</a></button>
+    </div>
+    </form>
+</div>
+<script>
+document.getElementById('id_image').classList.add('form-control','classname2');
+document.getElementById('id_img1').classList.add('form-control','form-control-sm')
+document.getElementById('id_img2').classList.add('form-control','form-control-sm')
+document.getElementById('id_desc').classList.add('form-control','descform')
+document.getElementById('id_title').classList.add('form-control','')
+</script>
+{% endblock content %}

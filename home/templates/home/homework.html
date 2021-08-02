@@ -1,6 +1,24 @@
 {% extends 'home/base.html' %}
+{% load static %}
 {% block content %}
-{% for homework in homework %}
-<h1>{{ homework.title }}</h1>
-{% endfor %}
+<section class="homeright">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            {{ homework.desc }}
+        </div>
+        <div class="col-md-8">
+            <div class="hereis">
+                <h1>{{ homework.title }}</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <img src="{{ homework.img1.url }}" class="card-img homim" alt="...">
+                <img src="{{ homework.img2.url }}" class="card-img homim" alt="...">
+            </div>
+        </div>
+      </div>
+</section>
+<div class="d-grid gap-2">
+    <button class="btn btn-primary" type="button"><a href="/">go back</a></button>
+</div>
 {% endblock content %}

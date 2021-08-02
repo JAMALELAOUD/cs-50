@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 .navbar{
     background: black;
     width: 100%;
@@ -83,7 +86,7 @@ li:hover{
     color: white;
     padding: 5px;
     border-radius: 5px;
-    padding: 1px 135px;
+    padding: 1px 155px;
     cursor: pointer;
 }
 .ctitle:hover{
@@ -100,4 +103,30 @@ li:hover{
     text-align: center;
     margin-top: -20px;
     margin-bottom: 10px;
+}
+.imga{
+    float:left;
+    width:  100%;
+    height: 220px;
+    object-fit: cover;
+}
+.misform{
+    position: absolute;
+    max-width: 800px;
+    height: 50px;
+    display:flexbox;
+    margin-left: 70px;
+}
+.ptitle{
+    margin-left: 30%;
+}
+.descform{
+    height: 50px;
+}
+.homim{
+    width: 700px
+
+}
+.homeright{
+    margin-top: 50px;
 }

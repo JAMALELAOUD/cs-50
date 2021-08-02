@@ -4,8 +4,8 @@
 <header>
     <nav class="navbar">
         <ul class="it">
-            <li>Home</li>
-            <li>HomeWork</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#homeworkss">HomeWorks</a></li>
             <li>Contact</li>
             <li class="logoo">Homework</li>
         </ul>
@@ -16,11 +16,11 @@
         Welcome back..!
     </div>
     <div class="btns">
-        <a class="view hbtn">View homework</a>
-        <a class="upload hbtn">Upload homework</a>
+        <a class="view hbtn" href="#homeworkss">View homework</a>
+        <a class="upload hbtn" href="/homework_upload/">Upload homework</a>
     </div>
 </section>
-<section class="hwork">
+<section class="hwork" id="homeworkss">
     <div class="row">
         <div class="col-6 col-md-4">
             
@@ -30,18 +30,18 @@
                 Here is the latest homeworks..
             </div>
             <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
             {% for homework in homework %}
-                <div class="col">
                     <div class="card">
-                      <a href="{% url 'home:homework' homework.id  %}"> <img src="{{ homework.img.url }}" class="card-img-top" alt=""></a>
+                      <a href="{% url 'home:homework' homework.id  %}"> <img src="{{ homework.image.url }}" class="card-img-top imga" alt=""></a>
                       <div class="card-body">
                         <h5 class="card-title"><a href="{% url 'home:homework' homework.id  %}" class="ctitle">View</a></h5>
                         <p class="card-text">{{ homework.title }}</p>
                       </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
+            </div>
         </div>
       </div>
 </section>

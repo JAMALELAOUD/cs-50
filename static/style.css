@@ -93,7 +93,9 @@ li:hover{
     color: black;
     background-color: crimson;
 }
-.card{
+.cardc{
+    max-width: 425px;
+    margin-top: 7px;
     background-color: cyan;
 }
 .hereis{
@@ -105,10 +107,12 @@ li:hover{
     margin-bottom: 10px;
 }
 .imga{
-    float:left;
     width:  100%;
     height: 220px;
     object-fit: cover;
+}
+.culo{
+    display: inline-flex;
 }
 .misform{
     position: absolute;
@@ -129,4 +133,12 @@ li:hover{
 }
 .homeright{
     margin-top: 50px;
+}
+.descri{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+ 
 }

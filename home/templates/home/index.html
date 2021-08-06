@@ -21,28 +21,18 @@
     </div>
 </section>
 <section class="hwork" id="homeworkss">
-    <div class="row">
-        <div class="col-6 col-md-4">
-            
-        </div>
-        <div class="col-md-8">
-            <div class="hereis">
-                Here is the latest homeworks..
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-            {% for homework in homework %}
-                    <div class="card">
-                      <a href="{% url 'home:homework' homework.id  %}"> <img src="{{ homework.image.url }}" class="card-img-top imga" alt=""></a>
-                      <div class="card-body">
-                        <h5 class="card-title"><a href="{% url 'home:homework' homework.id  %}" class="ctitle">View</a></h5>
-                        <p class="card-text">{{ homework.title }}</p>
-                      </div>
-                    </div>
-                </div>
-            {% endfor %}
-            </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+{% for homework in homework %}
+  <div class="col">
+    <div class="card">
+      <a href="{% url 'home:homework' homework.id  %}"><img src="{{ homework.image.url }}" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title">{{ homework.title }}</h5>
+        <p class="card-text descri">{{ homework.desc }}</p>
       </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 </section>
 {% endblock content %}

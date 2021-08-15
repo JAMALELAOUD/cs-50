@@ -1,5 +1,5 @@
 # cs-50
-heey,
+Hi,
 My name is Jamal, I'm from kenitra, Morocco and I'm computer science student at University Ibn tofail
 So this is will be my final project for the CS50 <br>
 <h4>title : homework organizer<h4>

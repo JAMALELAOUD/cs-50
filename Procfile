@@ -1,1 +1,1 @@
-web: gunicorn jamal.wsgi
+web: gunicorn jamal.wsgi --log-file -
